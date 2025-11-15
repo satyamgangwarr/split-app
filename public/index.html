@@ -359,7 +359,7 @@
                             <p class="text-sm text-gray-500">Paid by ${exp.paid_by_username}</p>
                         </div>
                         <div class="text-right">
-                             <p class="font-bold text-lg">$${exp.amount}</p>
+                             <p class="font-bold text-lg">₹${exp.amount}</p>
                              <button onclick="deleteExpense(${exp.id})" class="text-xs text-red-500 hover:underline">Delete</button>
                         </div>
                     `;
@@ -384,7 +384,7 @@
                 ul.className = 'space-y-1';
                 summary.forEach(txn => {
                     const li = document.createElement('li');
-                    li.innerHTML = `<span class="font-semibold">${txn.from}</span> owes <span class="font-semibold">${txn.to}</span> <span class="font-bold text-green-700">$${txn.amount}</span>`;
+                    li.innerHTML = `<span class="font-semibold">${txn.from}</span> owes <span class="font-semibold">${txn.to}</span> <span class="font-bold text-green-700">₹${txn.amount}</span>`;
                     ul.appendChild(li);
                 });
                 groupSummary.appendChild(ul);
@@ -667,5 +667,3 @@
     </script>
 </body>
 </html>
-
-
